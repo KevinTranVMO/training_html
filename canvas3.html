@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <h1>Vẽ đường cong bằng canvas</h1>
+    <canvas id="myCanvas" width="800" height="400"></canvas>
+    <script>
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    context.beginPath();
+    context.moveTo(20, 20); 
+    context.quadraticCurveTo(20, 100, 200, 20);
+    context.lineWidth = 1;
+    context.strokeStyle = 'red';
+    context.stroke();
+    </script>
+    <canvas id="myCanvas1" width="1000" height="500"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas1')
+        var context = canvas.getContext('2d')
+        context.beginPath();
+        context.moveTo(10, 0); 
+        context.quadraticCurveTo(30, 600, 900, 20); 
+        context.lineWidth = 5;
+        context.strokeStyle = 'blue';
+        context.stroke();
+
+    </script>
+
+</body>
+</html>
